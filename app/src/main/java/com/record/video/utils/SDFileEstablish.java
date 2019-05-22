@@ -26,8 +26,7 @@ public class SDFileEstablish {
      * @return
      */
     public static boolean isSdCardExist() {
-        return Environment.getExternalStorageState().equals(
-                Environment.MEDIA_MOUNTED);
+        return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
     }
 
     public String getFileName(boolean isPicture) {
@@ -52,7 +51,7 @@ public class SDFileEstablish {
         String mPath = foldername(isformat);
         String path  = foldertimeneme(mPath);
         String mpath2 = getFileName(isformat);
-        File f2 = new File(path+mpath2);
+        File f2 = new File(path + mpath2);
         return f2;
     }
 
@@ -73,9 +72,9 @@ public class SDFileEstablish {
      * yyyy-MM-dd 格式的时间
      * @return
      */
-    public String foldertime(){
-        return new SimpleDateFormat("yyyy-MM-dd").format((new Date()));
-    }
+//    public String foldertime(){
+//        return new SimpleDateFormat("yyyy-MM-dd").format((new Date()));
+//    }
 
     /**
      * 创建文件夹
@@ -91,9 +90,6 @@ public class SDFileEstablish {
      */
     public String mediaresources(){
         return file(SDCard.SDcardpath()+"/media");
-
-//        File saveFile = new File(Environment.getExternalStorageDirectory(), "video");
-//        return file();
     }
 
     /**
@@ -102,7 +98,8 @@ public class SDFileEstablish {
      * @return
      */
     public String foldertimeneme(String path){
-        return file(path+"/"+foldertime());
+        return file(path+"/");
+//        return file(path+"/"+foldertime());
     }
     /**
      * 判断文件夹是否创建

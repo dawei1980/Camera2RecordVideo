@@ -314,6 +314,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (mIsRecordingVideo) {
                     stopRecordingVideo();
                 } else {
+                    //==========================================================================================
+                    personTracker.personDetectVideo(mNextVideoAbsolutePath);
+                    //==========================================================================================
                     startRecordingVideo();
                 }
                 break;
@@ -519,7 +522,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mMediaRecorder.prepare();
 
         //==========================================================================================
-        personTracker.personDetectVideo(mNextVideoAbsolutePath);
+//        personTracker.personDetectVideo(mNextVideoAbsolutePath);
         //==========================================================================================
     }
 
